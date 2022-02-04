@@ -1,1 +1,19 @@
-<p>task6 works!</p>
+<h5 class="text-center">Dynamic Division creation with alerts</h5>
+<div>
+    <cdk-virtual-scroll-viewport style="height: 90vh; width: 100vw" itemSize="90">
+        <div class="row h-100">
+            <ng-container *cdkVirtualFor="let n of numbers">
+                <div class="col-sm-6 col-md-3 my-3">
+                    <div class="card mx-auto" style="height: 200px; width: 200px">
+                        <div class="card-header">
+                            Division #{{n}}
+                        </div>
+                        <div class="card-body align-self-center my-5">
+                            <button type="button" class="btn btn-dark" (click)=onClick(n)>Click</button>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </cdk-virtual-scroll-viewport>
+</div>
